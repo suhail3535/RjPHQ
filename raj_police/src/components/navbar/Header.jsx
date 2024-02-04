@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import ashoksign from "../../images/ashoksign.png";
+import ashoksign from "../../images/yjdpo.png";
 
 import logo from "../../images/rj_logo_.png";
 import cmimage from "../../images/cmsir.png";
@@ -43,7 +43,7 @@ const Header = () => {
                 <div className="cm_image_div">
                     <img src={cmimage} alt="cmsir_image" />
                     <p>श्री भजनलाल शर्मा </p>
-                    <span>माननीय मुख्यमंत्री, राजस्थान</span>
+                    <span className="title">माननीय मुख्यमंत्री, राजस्थान</span>
                 </div>
             </div>
         </div>

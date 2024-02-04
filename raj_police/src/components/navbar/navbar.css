@@ -1,0 +1,61 @@
+.header {
+
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(78, 118, 144);
+    color: white;
+    padding: 0px 10px;
+}
+#part_one {
+    width: 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#part_one svg {
+    font-size: 25px;
+    cursor: pointer;
+}
+#part_two {
+    height: 100%;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+#part_two p,
+span {
+    margin: 10px;
+
+    font-weight: 450;
+}
+#part_two p,
+span:hover {
+cursor: pointer;
+color: rgb(219, 17, 17);
+transition: all 0.5s ease-in-out;
+
+
+}
+.login_dep {
+    background-color: rgb(219, 17, 17);
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    padding: 0px 10px;
+    margin: 5px 0px;
+}
+.login_dep:hover {
+    background-color: brown;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.news{
+    height: 40px;
+    background-color: rgb(248, 228, 203);
+    display: flex;
+    align-items: center;
+}
