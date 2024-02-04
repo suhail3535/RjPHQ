@@ -1,71 +1,37 @@
-import React, { useState } from "react";
-import { Box, IconButton, useBreakpointValue } from "@chakra-ui/react";
-// Here we have used react-icons package for the icons
-import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
-// And react-slick as our Carousel Lib
-import Slider from "react-slick";
-
-// Settings for the slider
-const settings = {
-    dots: true,
-    arrows: false,
-    fade: true,
-    infinite: true,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 2000, // Change to 2000 milliseconds (2 seconds)
-    slidesToShow: 1,
-    slidesToScroll: 1,
-};
-
-export default function Carousel() {
-    // As we have used custom buttons, we need a reference variable to
-    // change the state
-    const [slider, setSlider] = useState(null);
-
-    // These are the breakpoints which changes the position of the
-    // buttons as the screen size changes
-    const top = useBreakpointValue({ base: "90%", md: "50%" });
-    const side = useBreakpointValue({ base: "30%", md: "10px" });
-
-    // These are the images used in the slide
-    const cards = [
-        "https://images.unsplash.com/photo-1612852098516-55d01c75769a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
-        "https://images.unsplash.com/photo-1627875764093-315831ac12f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
-        "https://images.unsplash.com/photo-1571432248690-7fd6980a1ae2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
-    ];
+import React from "react";
+import { images } from "../../utils/data";
+import Carousel from "./Carousel";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+const Home = () => {
+    console.log(images);
 
     return (
-        <Box
-            position={"relative"}
-            height={"600px"}
-            width={"full"}
-            overflow={"hidden"}>
-            {/* CSS files for react-slick */}
-            <link
-                rel="stylesheet"
-                type="text/css"
-                href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-            />
-            <link
-                rel="stylesheet"
-                type="text/css"
-                href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-            />
-
-            <Slider {...settings} ref={(slider) => setSlider(slider)}>
-                {cards.map((url, index) => (
-                    <Box
-                        key={index}
-                        height={"6xl"}
-                        position="relative"
-                        backgroundPosition="center"
-                        backgroundRepeat="no-repeat"
-                        backgroundSize="cover"
-                        backgroundImage={`url(${url})`}
-                    />
-                ))}
-            </Slider>
-        </Box>
+        <div className="carosal_div_container">
+            <Carousel images={images} />
+            <div className="card_div">
+                <div>
+                    <FaArrowUpRightFromSquare />
+                    <span>Crime Analytics</span>
+                    <button>Open</button>
+                </div>
+                <div>
+                    <FaArrowUpRightFromSquare />
+                    <span>Crime Analytics</span>
+                    <button style={{backgroundColor:"red"}}>Open</button>
+                </div>
+                <div>
+                    <FaArrowUpRightFromSquare />
+                    <span>Crime Analytics</span>
+                    <button>Open</button>
+                </div>
+                <div>
+                    <FaArrowUpRightFromSquare />
+                    <span>Crime Analytics</span>
+                    <button>Open</button>
+                </div>
+            </div>
+        </div>
     );
-}
+};
+
+export default Home;

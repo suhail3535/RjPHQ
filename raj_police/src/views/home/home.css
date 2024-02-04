@@ -1,0 +1,55 @@
+.carousel img {
+    width: 100%;
+    display: none;
+}
+
+.carousel img.active {
+    display: block;
+    height: 600px;
+}
+
+.carosal_div_container {
+    /* border: 2px solid red; */
+    position: relative;
+}
+.card_div {
+    /* border: 2px solid blue; */
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+
+    justify-content: space-evenly;
+}
+.card_div div {
+    text-align: center;
+    display: flex;
+    padding: 30px;
+
+    border-radius: 39px;
+    background: #ffffff;
+    box-shadow: 5px 5px 10px rgba(156, 156, 156, 0.5),
+        -5px -5px 10px rgba(255, 255, 255, 0.5);
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card_div div button {
+    background-color: white;
+    color: rgb(78, 118, 144);
+    padding: 2px 30px;
+    border-radius: 10px;
+    display: none;
+}
+.card_div div:hover {
+    background-color: rgb(78, 118, 144);
+    color: white;
+    cursor: pointer;
+
+}
+.card_div div button:hover{
+    display: block;
+}

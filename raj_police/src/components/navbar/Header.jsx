@@ -1,9 +1,10 @@
 import React from "react";
 import "./header.css";
-import ashoksign from "../../images/yjdpo.png";
+// import ashoksign from "../../images/yjdpo.png";
+import ashoksign from "../../Assets/images/yjdpo.png"
 
-import logo from "../../images/rj_logo_.png";
-import cmimage from "../../images/cmsir.png";
+import logo from "../../Assets/images/rj_logo_.png";
+import cmimage from "../../Assets/images/cmsir.png";
 import { Switch, Stack, Tooltip, Button } from "@chakra-ui/react";
 const Header = () => {
     return (
