@@ -16,13 +16,13 @@ const Header = () => {
             </div>
             <div className="content_div_container">
                 <div className="content_div_container_child_1">
-                    <div className="switch">
+                    {/* <div className="switch">
                         <Stack align="center" direction="row">
                             <Switch size="lg" />
                         </Stack>
                         <p>Eng</p>
-                    </div>
-                    <div className="button_div">
+                    </div> */}
+                    {/* <div className="button_div">
                         <Tooltip hasArrow label="dark mode" bg="purple">
                             <Button bg="gray"></Button>
                         </Tooltip>
@@ -38,7 +38,7 @@ const Header = () => {
                         <Tooltip hasArrow label="old pannel" bg="RGB(36 35 35)">
                             <Button bg="yellow"></Button>
                         </Tooltip>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="cm_image_div">
