@@ -9,47 +9,66 @@
 }
 
 .carosal_div_container {
-    /* border: 2px solid red; */
     position: relative;
 }
+
 .card_div {
-    /* border: 2px solid blue; */
     height: auto;
     width: 100%;
     padding: 20px;
+    font-weight: bold;
     position: absolute;
     bottom: 100px;
     display: flex;
-
     justify-content: space-evenly;
 }
-.card_div div {
-    text-align: center;
-    display: flex;
-    padding: 30px;
 
-    border-radius: 39px;
+.arrow {
+    margin: auto;
+    color: rgb(78, 118, 144);
+    font-size: 20px;
+}
+
+.card {
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px 20px;
     background: #ffffff;
     box-shadow: 5px 5px 10px rgba(156, 156, 156, 0.5),
-        -5px -5px 10px rgba(255, 255, 255, 0.5);
-
+        -5px -5px 5px rgba(255, 255, 255, 0.5);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.5s ease, transform 0.5s ease, width 0.5s ease; /* Added width transition */
 }
-.card_div div button {
+
+#btn {
     background-color: white;
     color: rgb(78, 118, 144);
-    padding: 2px 30px;
+    padding: 2px 10px;
     border-radius: 10px;
+    margin: 5px auto;
     display: none;
 }
-.card_div div:hover {
+
+.card:hover {
     background-color: rgb(78, 118, 144);
     color: white;
     cursor: pointer;
-
+    transform: scale(1.1);
+    border: 2px solid white;
+    /* width: 120%; Adjust width as needed */
 }
-.card_div div button:hover{
+
+.card:hover #btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card:hover #btn .eye-icon {
     display: block;
+}
+
+.card:hover .eye-icon {
+    margin: 4px 5px;
 }
