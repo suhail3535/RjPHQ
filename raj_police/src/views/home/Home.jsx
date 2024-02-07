@@ -11,6 +11,7 @@ const Home = () => {
 
     return (
         <div className="carosal_div_container">
+            {/* this is card carousel */}
             <Carousel images={images} />
             <div className="card_div">
                 <div className="card">
